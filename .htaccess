@@ -1,0 +1,19 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.+)$ index.php?query=$1&%{QUERY_STRING}
+
+
+#abc.com/index.php
+#abc.com/index.php?action=info
+#abc.com/index.php?action=product&id=25&page=2
+#abc.com/index.php?action=contact
+
+#Linmoi
+#abc.com
+#abc.com/thong-tin.html
+#abc.com/san-pham/san-pham-nuoc-hoa-nam
+#abc.com/san-pham/25/san-pham-nuoc-hoa-nam
+#abc.com/contact
